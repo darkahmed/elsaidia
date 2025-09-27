@@ -904,6 +904,63 @@
     .card:hover {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
+    
+    .leadership-section {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0,234,255,0.1), rgba(179,102,255,0.1));
+      border: 2px solid rgba(0,234,255,0.3);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0,234,255,0.2);
+    }
+    
+    .leadership-title {
+      font-family: 'Changa', sans-serif;
+      font-size: 2.5em;
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px rgba(0,234,255,0.5);
+      font-weight: 700;
+    }
+    
+    .leadership-names {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    
+    .leader-card {
+      background: rgba(5,5,15,0.8);
+      border-radius: 12px;
+      padding: 25px;
+      border: 2px solid var(--secondary);
+      min-width: 250px;
+      box-shadow: 0 5px 20px rgba(179,102,255,0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .leader-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(179,102,255,0.5);
+    }
+    
+    .leader-title {
+      font-family: 'Changa', sans-serif;
+      font-size: 1.8em;
+      color: var(--secondary);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .leader-name {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 2.2em;
+      color: var(--primary);
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0,234,255,0.5);
+    }
   </style>
 </head>
 <body>
@@ -959,9 +1016,9 @@
   </div>
 
   <nav id="mainNav">
-    <a href="#about">عن الاتحاد</a>
-    <a href="#vision">هدفنا</a>
-    <a href="#activities">الأنشطة الطلابية</a>
+    <a href="#about">الاتحادات الطلابية</a>
+    <a href="#leadership">قادة الاتحاد</a>
+    <a href="#activities">الأنشطة</a>
     <a href="#benefits">فوائد المشاركة</a>
     <a href="#contact">للاستفسارات والاقتراحات</a>
   </nav>
@@ -983,22 +1040,125 @@
     <hr>
 
     <div id="about" class="card">
-      <h2>عن اتحاد الطلاب</h2>
-      <p>اتحاد طلاب السعيدية الثانوية العسكرية بنين هو الهيئة الطلابية الرسمية التي تمثل طلاب المدرسة، ويهدف إلى:</p>
-      <ul>
-        <li>تنظيم الأنشطة الطلابية المختلفة وتسهيل مشاركة الطلاب فيها</li>
-        <li>تمثيل الطلاب أمام إدارة المدرسة ونقل احتياجاتهم ومقترحاتهم</li>
-        <li>تنمية روح التعاون والعمل الجماعي بين الطلاب</li>
-        <li>اكتشاف المواهب الطلابية ودعمها وتطويرها</li>
-        <li>خلق بيئة مدرسية إيجابية تحفز على الإبداع والتميز</li>
-      </ul>
-    </div>
+        <h2>الاتحادات الطلابية</h2>
+        <p>تنظيمات تربوية ديمقراطية داخل المدرسة بحيث يكون لها تشكيلات متعددة المستويات تعمل على الالتزام بمبادئ الاتحاد وتحقيق أهدافه</p>
+        <h3>مبادئ الاتحاد</h3>
+        <ul>
+          <li>الإيمان بالله وملائكته وكتبه ورسله واليوم الآخر والتطبيق العملى لهذا من خلال السلوك اليومى للطلاب والبعد عن أى قول أو عمل يتعارض مع هذا المبدإ</li>
+          <li>ضمان حرية التعبير للطلاب للمشاركة فى اتخاذ كافة القرارات المتعلقة بالعملية التربوية والتعليمية</li>
+          <li>ترسيخ الديمقراطية وتحقيق المساواة والعدالة الاجتماعية بالوسائل المختلفة انطلاقًا من ثورة 25 يناير</li>
+          <li>الإيمان بالوحدة الوطنية كمدخل للوحدة الإنسانية والحفاظ على المقدسات والتأكيد على روح الانتماء للأسرة والمدرسة والمجتمع</li>
+          <li>التأكيد على قيم المواطنة مما يعزز الانتماء الوطنى ووالحفاظ على دعائم السلام الاجتماعى</li>
+          <li>تدعيم القيم وتأصيلها فى نفوس الطلاب عن طريق تشجيع القدوة الطيبة بين الشباب وتطوير الشخصية والتأكيد على أن كل حق يقابله واجب</li>
+        </ul>
+  
+        <h3>أهداف الاتحاد</h3>
+        <ul class="nested-goals">
+          <li class="main-goal">
+            <span class="goal-arrow"></span> تشجيع الطلاب على التفوق الدراسى وتدعيم روح الإبداع والابتكار
+          </li>
+          <li class="main-goal">
+            <span class="goal-arrow"></span> الالتزام بمبادئ الاتحاد كتنظيم شرعى وقومى
+          </li>
+          <li class="main-goal">
+            <span class="goal-arrow"></span> الاستفادة من الأنشطة التربوية داخل المدرسة وخارجها
+          </li>
+          <li class="main-goal has-subpoints">
+            <span class="goal-arrow"></span> الإسهام فى تحقيق أهداف التعليم وأهمها:
+            <ul class="sub-goals">
+              <li><span class="sub-arrow"></span> التأكيد على بناء الشخصية المصرية القادرة على مواجهة تحديات المستقبل</li>
+              <li><span class="sub-arrow"></span> إقامة المجتمع المنتج</li>
+              <li><span class="sub-arrow"></span> تحقيق التنمية الشاملة</li>
+              <li><span class="sub-arrow"></span> إعداد جيل من العلماء عن طريق برامج العناية بالمتفوقين والموهوبين</li>
+            </ul>
+          </li>
+          <li class="main-goal">
+            <span class="goal-arrow"></span> التعبير عن فكر الطلاب وتأكيد حقوقهم ومحاسبة من يخالف المبادئ والأهداف
+          </li>
+          <li class="main-goal">
+            <span class="goal-arrow"></span> توسيع دائرة المعارف والخبرات بتبادل الزيارات والتأكيد على ثقافة الحوار
+          </li>
+          <li class="main-goal">
+            <span class="goal-arrow"></span> الاهتمام بالثقافة الذاتية والعامة للتعايش مع التطور التكنولوجى فى الحياة اليومية
+          </li>
+        </ul>
+  
+        <style>
+          .nested-goals {
+            list-style: none;
+            padding-right: 0;
+          }
+          
+          .main-goal {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+          }
+          
+          .goal-arrow {
+            color: var(--primary);
+            margin-left: 10px;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+          }
+          
+          .has-subpoints {
+            margin-bottom: 10px;
+          }
+          
+          .sub-goals {
+            list-style: none;
+            padding-right: 40px;
+            margin-top: 10px;
+            border-right: 2px solid var(--secondary);
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+          
+          .sub-goals li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+          }
+          
+          .sub-arrow {
+            color: var(--secondary);
+            margin-left: 5px;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+          }
+          
+          .nested-principles li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 15px;
+          }
+          
+          .nested-principles li:before {
+            content: "▸";
+            position: absolute;
+            right: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.3em;
+          }
+        </style>
+      </div>
 
-    <div id="vision" class="card">
-      <h2>هدفنا</h2>
-      <div class="vision-mission">
-        <div class="mission">
-          <p>توفير بيئة داعمة ومحفزة للطلاب للمشاركة في الأنشطة المدرسية المتنوعة، وتنمية مهاراتهم وقدراتهم، وتعزيز قيم الانتماء والمسؤولية والقيادة.</p>
+    <div id="leadership" class="leadership-section">
+      <div class="leadership-title">قادة الاتحاد</div>
+      <div class="leadership-names">
+        <div class="leader-card">
+          <div class="leader-title">أمين الاتحاد</div>
+          <div class="leader-name">أحمد سامح عبدالنبي</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-title">مسؤول الإتحاد</div>
+          <div class="leader-name">أ/عزة جاد الحق</div>
         </div>
       </div>
     </div>
@@ -1017,7 +1177,7 @@
           <li>بعد الدورة سيتم عمل اختبار قبل الدخول في كورس الترم الثاني</li>
         </ul>
         <div class="btn-container">
-          <a href="programming-course-1.html" class="btn"><i class="fas fa-code"></i> للمزيد من التفاصيل</a>
+          <a href="programming-course-1.html" class="btn"><i class="fas fa-code"></i> الذهاب إلى صفحة الدورة</a>
         </div>
       </div>
     </div>
@@ -1129,7 +1289,7 @@
     });
 
     window.addEventListener('scroll', function() {
-      const sections = document.querySelectorAll('.card');
+      const sections = document.querySelectorAll('.card, .leadership-section');
       const navLinks = document.querySelectorAll('nav a');
       
       let current = '';
@@ -1176,7 +1336,7 @@
       });
     }, { threshold: 0.1 });
     
-    document.querySelectorAll('.card').forEach(card => {
+    document.querySelectorAll('.card, .leadership-section').forEach(card => {
       observer.observe(card);
     });
 
